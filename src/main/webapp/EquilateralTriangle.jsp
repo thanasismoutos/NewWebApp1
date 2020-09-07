@@ -6,7 +6,24 @@
 <meta charset="ISO-8859-1">
 <title>Equilateral Triangle</title>
 </head>
-<body bgcolor="FEF9E7">
+<body bgcolor="FEF9E7">	
+	
+	
+try {
+	String connectionURL = "jdbc:mysql://localhost:3306/page_visits?serverTimezone=UTC"; 
+	Connection connection = StatisticsDB; 
+	Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); 
+	connection = DriverManager.getConnection(connectionURL, "root", "");
+		if( !connection.isClosed() ){
+			Statement stmt0 = connection.createStatement();
+			stmt0.executeUpdate("INSERT INTO PAGE_VISITS (SHAPE, TS) VALUES ('EquilateralTriangle', NOW())");
+			connection.close();
+		}
+	}
+	catch (SQLException e) {
+		out.println("Unable to connect to database." + e.getMessage());
+	}
+	
 <font face="verdana">
 	<h1>Hello!</h1>
 
