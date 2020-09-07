@@ -33,6 +33,7 @@
     </ol>
     <br>
 	<br>
+		<p>Quote of the day :"randomquote.jsp"<p> 
 	<br>
 	<center>
 		<font size="2">
